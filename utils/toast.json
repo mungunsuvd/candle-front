@@ -1,0 +1,52 @@
+{
+  "success_edit_profile": {
+    "title": "Success",
+    "description": "Updated",
+    "status": "success"
+  },
+  "list_false": {
+    "title": "Failed",
+    "description": "Low amount: 1,001 ELFC",
+    "status": "error"
+  },
+  "success_delist": {
+    "title": "Success",
+    "description": "Successfully delisted",
+    "status": "success"
+  },
+  "register_success": {
+    "title": "Амжилттай",
+    "description": "Таны бүртгэл амжилттай үүслээ. Та өөрийн бүртгүүлсэн цахим шууданг шалгана уу.",
+    "status": "success"
+  },
+  "login_success": {
+    "title": "Congratulations",
+    "description": "You successfully logged in",
+    "status": "success"
+  },
+  "signup_success": {
+    "title": "Congratulations",
+    "description": "You successfully signed up. Please verify",
+    "status": "success"
+  },
+  "reset_password": {
+    "title": "Congratulations",
+    "description": "your password has been successfully reseted",
+    "status": "success"
+  },
+  "copy_success": {
+    "title": "Congratulations",
+    "description": "Successfully copied link",
+    "status": "success"
+  },
+  "copy_fail": {
+    "title": "Error",
+    "description": "Unexpected error occurred",
+    "status": "error"
+  },
+  "make_profile_success": {
+    "title": "Амжилттай",
+    "description": "Таны зураг амжилттай солигдлоо.",
+    "status": "success"
+  }
+}
