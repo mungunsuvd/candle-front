@@ -12,15 +12,11 @@ export function SignUp({ config, body }: Prop) {
 }
 
 export function SignIn({ config, body }: Prop) {
-	return axiosClient.post("/nft1004/auth/signIn", body, config);
-}
-
-export function Verify({ config, body }: Prop) {
-	return axiosClient.post("/nft1004/auth/verifyUser", body, config);
+	return axiosClient.post("/client/login", body, config);
 }
 
 export function AuthMe(refresh_token: string) {
-	return axiosClient.post("/nft1004/auth/refreshToken", { refresh_token });
+	return axiosClient.post("/client/refresh_token", { refreshToken:refresh_token });
 }
 
 export function ForgotPasswordOtp({ config, body }: Prop) {

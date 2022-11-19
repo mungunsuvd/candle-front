@@ -26,7 +26,7 @@ export const Community = () => {
       ml={["0 !important", "4", null]}
       pt={["5", "0", "0"]}
     >
-      <Heading size="lg">{"Community"}</Heading>
+      <Heading size="lg">{"Support"}</Heading>
       {links.map((el: any, idx: number) => (
         <Link legacyBehavior href={el.path} key={el.label}>
           <a>

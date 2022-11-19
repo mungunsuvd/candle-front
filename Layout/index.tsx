@@ -1,4 +1,12 @@
-import { Box, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Icon,
+  Text,
+  useBreakpointValue,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { AppProps } from "next/dist/shared/lib/router/router";
 import { Sidebar } from "./Sidebar";
 import Auth from "../Components/Auth";
@@ -9,8 +17,8 @@ import { useRouter } from "next/router";
 import { UseAuthContext } from "../Context/AuthModalContext";
 
 import NextNProgress from "nextjs-progressbar";
-
-const noFooter = ["/nfts"];
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { Cart } from "./cart";
 
 const Layout = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -37,13 +45,16 @@ const Layout = ({ Component, pageProps }: AppProps) => {
 
   const NoSpace = [""];
 
+  //  const btnRef = React.useRef();
+
   return (
     <>
       <NextNProgress />
+      <Cart />
       {!NoSpace.includes(router.pathname) && <Box w="100%" h={HH} />}
       <Header {...userProps} />
-      <Component {...pageProps} />
-      {!noFooter.includes(router.pathname) && <Footer />}
+      <Component {...pageProps} {...userProps} />
+      <Footer />
       <Sidebar isOpen={drawerIsOpen} onClose={drawerOnClose} />
       <Auth isOpen={isOpen} onClose={onClose} />
     </>

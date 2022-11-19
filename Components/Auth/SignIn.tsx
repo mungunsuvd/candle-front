@@ -27,20 +27,20 @@ function SignIn({ ChangeHandler, setCred }: BodyInterface) {
 
   useEffect(() => {
     if (data) {
+      console.log(data);
       if (data.code) {
         setCred({
           code: data.code,
           credential: data.credential,
         });
-        ChangeHandler("verify");
       } else {
-        const { access_token, refresh_token } = data;
+        const { accessToken, refreshToken } = data;
         Toaster({ type: "login_success" });
         dispatcher({
           type: "login",
           state: {
-            token: access_token,
-            refresh_token,
+            token: accessToken,
+            refresh_token: refreshToken,
           },
         });
       }
@@ -53,18 +53,18 @@ function SignIn({ ChangeHandler, setCred }: BodyInterface) {
 
   const Handler = (e: FormEvent) => {
     e.preventDefault();
-    fetch({ credential, password });
+    fetch({ email: credential, password });
   };
 
   return (
     <Stack as="form" onSubmit={Handler}>
       <FormControl>
-        <FormLabel>{"email"}</FormLabel>
+        <FormLabel>{"E-Mail"}</FormLabel>
         <Input {...userNameBind} type="username" />
       </FormControl>
       <FormControl>
         <HStack alignItems="flex-start" justifyContent="space-between">
-          <FormLabel>{"password"}</FormLabel>
+          <FormLabel>{"Password"}</FormLabel>
         </HStack>
         <Input {...passwordBind} type="password" />
       </FormControl>

@@ -46,10 +46,10 @@ export function UseApi({ service, params }: Prop) {
 		} catch (err: any) {
 			setError(err);
 			setLoading(false);
-			if (err?.response?.status === 401)
-				dispatcher({
-					type: "logout",
-				});
+			// if (err?.response?.status === 410)
+			// 	dispatcher({
+			// 		type: "logout",
+			// 	});
 			return err;
 		}
 	};

@@ -12,7 +12,6 @@ import { useUser } from "../../Context/UserContext";
 
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import VerifyUser from "./Verify";
 
 interface Auth {
   isOpen: boolean;
@@ -45,9 +44,6 @@ const AuthBody = (
       return <SignIn {...props} />;
     case "sign-up":
       return <SignUp {...props} />;
-
-    case "verify":
-      return <VerifyUser cred={data} />;
   }
 };
 
@@ -84,7 +80,7 @@ function Auth({ isOpen, onClose }: Auth) {
     <Modal isOpen={isOpen} size="xs" onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>{which !== "verify" && "verify"}</ModalHeader>
+        <ModalHeader>{which !== "verify" && "Login"}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>{AuthBody(which, ChangeHandler, setCred, data)}</ModalBody>
       </ModalContent>

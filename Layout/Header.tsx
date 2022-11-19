@@ -39,7 +39,7 @@ interface Header {
 const menus = [
   {
     label: "Home",
-    path: "home",
+    path: "/",
   },
   {
     label: "Category",
@@ -49,10 +49,6 @@ const menus = [
     label: "Information",
     path: "information",
   },
-  // {
-  // 	label: "Creators",
-  // 	path: "creators",
-  // },
 ];
 
 interface DropMDetail {
@@ -146,7 +142,7 @@ export const Header = ({ isLoading, get_token, Handler, onOpen }: Header) => {
 
   useEffect(() => {
     if (!isLoading) {
-      fetch();
+      // fetch();
     }
   }, [isLoading]);
 
@@ -173,17 +169,12 @@ export const Header = ({ isLoading, get_token, Handler, onOpen }: Header) => {
         alignItems="center"
       >
         <HStack cursor="pointer" onClick={goToHome}>
-          <Image
-            src={"white" === "white" ? "/logo_dark.png" : "/logo_white.png"}
-            alt="von klara"
-            h={["30px", "35px", "40px"]}
-          />
           <Text
             fontFamily="'Rubik', sans-serif"
             fontWeight="bold"
             fontSize={["sm", "lg", "xl"]}
           >
-            Von Klara
+            VonKlara.com
           </Text>
         </HStack>
         <Spacer />
@@ -217,6 +208,7 @@ export const Header = ({ isLoading, get_token, Handler, onOpen }: Header) => {
               return (
                 <Link href={`/${el.path}`} key={el.label}>
                   <Text
+                    color={"black"}
                     cursor={"pointer"}
                     fontWeight={"500"}
                     letterSpacing={"1px"}

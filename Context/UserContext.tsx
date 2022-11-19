@@ -54,6 +54,7 @@ function UserReducer(state: State, action: Action) {
       };
     }
     case "logout": {
+      console.log("end ym bolood bnaa");
       Cookie.remove("refresh_token", {
         path: "/",
       });
@@ -86,12 +87,13 @@ function UserProvider({ children }: UserProviderProps) {
     setLoading?: _Dispatch<SetStateAction<boolean>> | undefined
   ) => {
     try {
-      const { access_token, refresh_token }: any = await AuthMe(token);
+      const { accessToken, refreshToken }: any = await AuthMe(token);
+
       dispatch({
         type: "login-passive",
         state: {
-          token: access_token,
-          refresh_token,
+          token: accessToken,
+          refresh_token: refreshToken,
         },
       });
       if (setLoading) setLoading(false);
