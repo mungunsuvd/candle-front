@@ -6,7 +6,7 @@ import Theme from "../Theme";
 // const toast = useToast();
 
 const axiosClient = axios.create({
-	baseURL: `http://192.168.1.241:2470/`,
+	baseURL: `http://localhost:2470//`,
 	headers: {
 		Accept: "application/json",
 		"Content-Type": "application/json",

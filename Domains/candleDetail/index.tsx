@@ -13,18 +13,35 @@ import { useEffect, useState } from "react";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { UseAuthContext } from "../../Context/AuthModalContext";
 import { useUser } from "../../Context/UserContext";
-
+import { UseApi } from "../../Hooks/UseApi";
+import { addToCart as _addToCart } from "../../Services/lib/candle";
 export const CandleDetail = ({ data, isLoading }: any) => {
   const [images, setImages] = useState("");
+  const [loading, setLoading] = useState(false);
   const { get_token } = useUser();
+  const [{ data: datas, isLoading: isLoadings }, fetch] = UseApi({
+    service: _addToCart,
+  });
   const { isOpen, onClose, onOpen } = UseAuthContext();
   const Handler = () => {
     onOpen();
   };
+  const addCart = () => {
+    setLoading(true);
+    fetch({ token: get_token(), candleId: data._id })
+      .then((res) => {
+        setLoading(false);
+        console.log(res);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+    console.log(data._id);
+  };
   useEffect(() => {
     setImages(data.bannerPic);
   }, [data]);
-  console.log(data);
+
   const Container = ["95%", null, null, null, "1320px"];
   return (
     <HStack
@@ -67,10 +84,11 @@ export const CandleDetail = ({ data, isLoading }: any) => {
             Хадгалах
           </Button>
           <Button
+            isLoading={loading}
             onClick={
               get_token()
                 ? () => {
-                    console.log("sda");
+                    addCart();
                   }
                 : Handler
             }
