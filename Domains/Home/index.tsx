@@ -32,7 +32,7 @@ export const HomePages = ({ data, isLoading }: any) => {
       <SimpleGrid gap={10} columns={[1, 2, 2, 4, 5]}>
         {data.map((el: any, ind: number) => {
           return (
-            <Link href={`candle_detail/${el._id}`}>
+            <Link key={ind} href={`candle_detail/${el._id}`}>
               <AspectRatio ratio={1 / 1}>
                 <Stack
                   boxShadow="xl"
@@ -50,6 +50,7 @@ export const HomePages = ({ data, isLoading }: any) => {
                     w="100%"
                     h="100%"
                     src={el.bannerPic}
+                    alt="banner"
                   />
 
                   <Flex flexDir={"column"} p={1} w="100%">

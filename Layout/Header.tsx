@@ -46,8 +46,8 @@ const menus = [
     path: "category",
   },
   {
-    label: "Information",
-    path: "information",
+    label: "Customize",
+    path: "custom",
   },
 ];
 

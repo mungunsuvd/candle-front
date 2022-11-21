@@ -102,7 +102,12 @@ export const Cart = () => {
                       w="100%"
                       p={5}
                     >
-                      <Image w="100px" borderRadius="12px" src={el.BannerPic} />
+                      <Image
+                        w="100px"
+                        borderRadius="12px"
+                        src={el.BannerPic}
+                        alt={"ss"}
+                      />
                       <Stack>
                         <Text fontSize={"12px"} fontWeight={"bold"}>
                           {el.name}

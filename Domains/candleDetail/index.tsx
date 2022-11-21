@@ -52,12 +52,17 @@ export const CandleDetail = ({ data, isLoading }: any) => {
     >
       <Stack>
         <Heading>{data.name}</Heading> 
-        <Image src={images} w="500px" />
+        <Image src={images} w="500px" alt="banner" />
         <SimpleGrid width={"500px"} columns={[4]}>
           {data.miniPic?.map((el: any, ind: number) => {
             return (
-              <Flex onClick={() => setImages(el)} cursor={"pointer"} p={2}>
-                <Image src={el} />
+              <Flex
+                key={ind}
+                onClick={() => setImages(el)}
+                cursor={"pointer"}
+                p={2}
+              >
+                <Image src={el} alt={el} />
               </Flex>
             );
           })}
