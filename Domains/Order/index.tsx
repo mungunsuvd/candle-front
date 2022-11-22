@@ -183,6 +183,9 @@ export const Orders = ({ order }: any) => {
                 <Heading fontSize="20px">
                   Та төлбөрөө хийсэн бол шалгах товчийг дарж баталгаажуулна уу
                 </Heading>
+                {isPaid == false && (
+                  <Text color="red">Төлбөр төлөгдөөгүй байна</Text>
+                )}
                 <Button onClick={() => tnxChecker()}>Шалгах</Button>
               </Stack>
             </HStack>
