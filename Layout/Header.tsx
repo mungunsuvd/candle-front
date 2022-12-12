@@ -38,15 +38,15 @@ interface Header {
 
 const menus = [
   {
-    label: "Home",
+    label: "Эхлэл",
     path: "/",
   },
   {
-    label: "Category",
+    label: "Ангиглал ",
     path: "category",
   },
   {
-    label: "Customize",
+    label: "Захиалга",
     path: "custom",
   },
 ];
@@ -256,7 +256,7 @@ export const Header = ({ isLoading, get_token, Handler, onOpen }: Header) => {
                 isLoading={isLoading}
                 onClick={get_token() ? () => {} : Handler}
               >
-                {"Login"}
+                {"Нэвтрэх"}
               </Button>
             )}
           </Box>

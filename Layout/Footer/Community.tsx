@@ -8,16 +8,20 @@ export const Community = () => {
     //   path: "/nfts",
     // },
     {
-      label: "Help Center",
-      path: "/help",
+      label: "Лаа авах ",
+      path: "/",
     },
     {
-      label: "About us",
+      label: "Бидний тухай",
       path: "/about-us",
     },
     {
-      label: "FAQ",
+      label: "Түгээмэл асуулт, хариулт",
       path: "/faq",
+    },
+    {
+      label: "Тусгай захиалга өгөх ",
+      path: "/customize",
     },
   ];
   return (
@@ -26,7 +30,7 @@ export const Community = () => {
       ml={["0 !important", "4", null]}
       pt={["5", "0", "0"]}
     >
-      <Heading size="lg">{"Support"}</Heading>
+      <Heading style={{fontFamily:'Comfortaa'}} size="lg">{"Үндсэн цэс"}</Heading>
       {links.map((el: any, idx: number) => (
         <Link legacyBehavior href={el.path} key={el.label}>
           <a>

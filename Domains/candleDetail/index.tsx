@@ -70,9 +70,10 @@ export const CandleDetail = ({ data, isLoading }: any) => {
       </Stack>
       <Flex w="50%" h="550px" justifyContent="space-evenly" flexDir={"column"}>
         <Text fontSize={"sm"}>Von Klara</Text>
-        <Heading fontSize={"14"} fontWeight={"bold"}>
+        <Heading fontSize={"20"} fontWeight={"bold"}>
           {data.name}
         </Heading>
+        
         <Heading fontSize={"14"}>Бүтээгдэхүүний тайлбар:</Heading> 
         <Text>{data.description}</Text>
         <Heading fontSize={"14"}>Найрлага:</Heading>
@@ -82,13 +83,16 @@ export const CandleDetail = ({ data, isLoading }: any) => {
         <Heading fontSize={"14"}>Хэмжээ:</Heading>
         <Text>{data.size}</Text>
         <Heading fontSize={"14"}>Асах хугацаа:</Heading>
-        <Text>{data.lightLength} Цаг</Text>
-        <Heading>{data.price}MNT</Heading>
+        <Text>{data.lightLength} цаг</Text>
+        <Heading fontSize={"14"}>Үнэ:</Heading>
+        <div style={{fontSize:'20px', fontFamily:'comfortaa', fontWeight: 'bold'}}> {data.price}  ₮</div>
         <HStack>
-          <Button leftIcon={<AiOutlineHeart />} variant={"outline"}>
+          <Button 
+            style={{borderColor:'#D6CFDF', color: 'black', fontWeight: 'lighter', border:' solid 1px #D6CFDF'}}leftIcon={<AiOutlineHeart />} variant={"outline"}>
             Хадгалах
           </Button>
           <Button
+          style={{backgroundColor:'#D6CFDF', color: 'black', fontWeight: 'lighter'}}
             isLoading={loading}
             onClick={
               get_token()

@@ -187,7 +187,7 @@ export const Sidebar = ({ isOpen, onClose }: Sidebar) => {
               ) : (
                 <VStack w="100%" alignItems="flex-start">
                   <Divider mb="3" />
-                  <Button onClick={Handler}>Login</Button>
+                  <Button onClick={Handler}>Нэвтрэх</Button>
                 </VStack>
               )}
             </HStack>

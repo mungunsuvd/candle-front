@@ -127,28 +127,29 @@ function SignUp({ ChangeHandler, setCred }: BodyInterface) {
             onChange={(e) => setAgreed(e.target.checked)}
           >
             <Text fontSize="12px" textAlign="center">
-              I agree to the terms of service and privacy policy
+             Үйлчилгээний нөхцөлийг зөвшөөрч байна.
             </Text>
           </Checkbox>
           <FormErrorMessage>
-            You must agree with our to terms of service and privacy policy to
-            create account
+          Үйлчилгээний нөхцөлтэй танилцаж, зөвшөөрсөн тохиолдолд бүртгүүлэх боломжтой.
           </FormErrorMessage>
         </FormControl>
         <Button
+           style={{backgroundColor: '#D6CFDF', color:"black"}}
           isLoading={SignUpIsloading}
           isDisabled={IsDisabled()}
           type="submit"
         >
-          {"Sign Up"}
+          {"Бүртгүүлэх"}
         </Button>
         <Divider />
         <Button
+          style={{borderColor:'#D6CFDF', color: 'black'}}
           isDisabled={SignUpIsloading}
-          variant="ghost"
+          variant='link'
           onClick={() => ChangeHandler("login")}
         >
-          {"Login"}
+          {"Нэвтрэх"}
         </Button>
       </Stack>
     </form>

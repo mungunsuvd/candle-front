@@ -18,7 +18,7 @@ const Step1 = ({ setValue, setDial }: Step1) => {
 
   return (
     <FormControl>
-      <FormLabel>{"e-mail"}</FormLabel>
+      <FormLabel>{"Цахим шуудан"}</FormLabel>
       {/* <PhoneInput
 				masks={{ mn: ".... ...." }}
 				inputStyle={{

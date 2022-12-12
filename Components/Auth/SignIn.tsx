@@ -59,25 +59,26 @@ function SignIn({ ChangeHandler, setCred }: BodyInterface) {
   return (
     <Stack as="form" onSubmit={Handler}>
       <FormControl>
-        <FormLabel>{"E-Mail"}</FormLabel>
+        <FormLabel>{"Цахим шуудан "}</FormLabel>
         <Input {...userNameBind} type="username" />
       </FormControl>
       <FormControl>
         <HStack alignItems="flex-start" justifyContent="space-between">
-          <FormLabel>{"Password"}</FormLabel>
+          <FormLabel>{"Нууц үг"}</FormLabel>
         </HStack>
         <Input {...passwordBind} type="password" />
       </FormControl>
-      <Button isDisabled={IsDisabled()} type="submit" isLoading={isLoading}>
-        {"Login"}
+      <Button isDisabled={IsDisabled()} type="submit" isLoading={isLoading}  style={{backgroundColor: '#D6CFDF', color:'black'}}>
+        {"Нэвтрэх "}
       </Button>
       <Divider />
       <Button
+        variant={"outline"}
+        style={{borderColor:'#D6CFDF', color: 'black'}}
         isDisabled={isLoading}
-        variant="ghost"
         onClick={() => ChangeHandler("sign-up")}
       >
-        {"Sign Up"}
+        {"Бүртгүүлэх "}
       </Button>
     </Stack>
   );

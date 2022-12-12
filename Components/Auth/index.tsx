@@ -80,7 +80,7 @@ function Auth({ isOpen, onClose }: Auth) {
     <Modal isOpen={isOpen} size="xs" onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>{which !== "verify" && "Login"}</ModalHeader>
+        <ModalHeader>{which !== "verify" && "Нэвтрэх" }</ModalHeader>
         <ModalCloseButton />
         <ModalBody>{AuthBody(which, ChangeHandler, setCred, data)}</ModalBody>
       </ModalContent>

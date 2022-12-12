@@ -87,17 +87,11 @@ const Step2 = ({
   });
   return (
     <>
-      <FormControl isInvalid={isValid.username}>
-        <FormLabel>{"username"}</FormLabel>
-        <Input type="username" {...binduserName} />
-        <FormErrorMessage>
-          Нэвтрэх нэр хоосон зай агуулж бологүй
-        </FormErrorMessage>
-      </FormControl>
+     
       <FormControl
         isInvalid={!IsDisabled(isPassValid) && bindpassword.value !== ""}
       >
-        <FormLabel>{"password"}</FormLabel>
+        <FormLabel>{"Нууц үг"}</FormLabel>
         <Input
           type="password"
           autoComplete="new-password"
@@ -115,7 +109,7 @@ const Step2 = ({
         <Requirement isPassValid={isPassValid} />
       </Collapse>
       <FormControl isInvalid={isValid.password}>
-        <FormLabel>{"password Repeat"}</FormLabel>
+        <FormLabel>{"Нууц үгээ дахин оруулах" }</FormLabel>
         <Input type="password" {...bindpasswordRepeat} />
         <FormErrorMessage>
           Давтан оруулсан нууц үг таарахгүй байна.
