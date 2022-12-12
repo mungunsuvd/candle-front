@@ -45,13 +45,14 @@ export const CandleDetail = ({ data, isLoading }: any) => {
   const Container = ["95%", null, null, null, "1320px"];
   return (
     <HStack
-      w="100%"
+      w="80%"
       justifyContent={"space-evenly"}
       my={["10px", "90px"]}
       px={["15px", "15px", "40px", "", "20px"]}
     >
       <Stack>
-        <Heading>{data.name}</Heading> 
+        <Heading fontFamily={"Comfortaa, sans-serif"} 
+                  fontSize={'28px'}>{data.name}</Heading> 
         <Image src={images} w="500px" alt="banner" />
         <SimpleGrid width={"500px"} columns={[4]}>
           {data.miniPic?.map((el: any, ind: number) => {
@@ -68,8 +69,9 @@ export const CandleDetail = ({ data, isLoading }: any) => {
           })}
         </SimpleGrid>
       </Stack>
-      <Flex w="50%" h="550px" justifyContent="space-evenly" flexDir={"column"}>
-        <Text fontSize={"sm"}>Von Klara</Text>
+      <Flex w="50%" h="550px" justifyContent="space-evenly" flexDir={"column"} paddingRight='10px'>
+        <Text   fontFamily={"Comfortaa, sans-serif"} 
+                    fontSize={'12px'}>VON KLARA</Text>
         <Heading fontSize={"20"} fontWeight={"bold"}>
           {data.name}
         </Heading>

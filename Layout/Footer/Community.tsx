@@ -30,11 +30,11 @@ export const Community = () => {
       ml={["0 !important", "4", null]}
       pt={["5", "0", "0"]}
     >
-      <Heading style={{fontFamily:'Comfortaa'}} size="lg">{"Үндсэн цэс"}</Heading>
+      <Heading fontFamily={"Comfortaa, sans-serif"} fontSize={'20px'}>{"Үндсэн цэс"}</Heading>
       {links.map((el: any, idx: number) => (
         <Link legacyBehavior href={el.path} key={el.label}>
           <a>
-            <Text opacity={0.5} size="sm">
+            <Text fontFamily={"Comfortaa, sans-serif"} fontSize={'14px'} opacity={0.5} size="sm">
               {el.label}
             </Text>
           </a>

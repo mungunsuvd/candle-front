@@ -22,7 +22,6 @@ export const HomePages = ({ data, isLoading }: any) => {
       w="100%"
       h="100%"
       maxW={Container}
-      bg="white"
       my={["10px", "90px"]}
       px={["15px", "15px", "40px", "", "20px"]}
       mx="auto"

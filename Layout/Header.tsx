@@ -13,15 +13,11 @@ import {
 import { useRouter } from "next/router";
 import { FiMenu } from "react-icons/fi";
 import { SearchInput, ThemeTrigger } from "../Components/Header";
-
-import { FaLanguage, FaUserCircle } from "react-icons/fa";
 import { useUser } from "../Context/UserContext";
 import style from "./header.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Borders, brandGradient } from "../Theme/common";
-import { MdCollections } from "react-icons/md";
-import { FaWallet } from "react-icons/fa";
 import { BsShieldLockFill } from "react-icons/bs";
 import { FiLogOut } from "react-icons/fi";
 
@@ -46,6 +42,10 @@ const menus = [
     path: "category",
   },
   {
+    label: "Мэдээ",
+    path: "news",
+  },
+  {
     label: "Захиалга",
     path: "custom",
   },
@@ -63,13 +63,12 @@ const DropDown = ({ hide, header }: DropMDetail) => {
   // const { setLocale, locale } = useI11();
 
   const profileDetail = [
-    { name: "", link: "wallet", icon: FaWallet },
-    { name: "", link: "assets", icon: MdCollections },
     { name: "", link: "info", icon: BsShieldLockFill },
   ];
   return hide ? (
     <VStack
-      w="200px"
+    backgroundColor={'#D6CFDF'}
+      w="100px"
       pos={"absolute"}
       bg={header}
       top={"60.5px"}
@@ -80,30 +79,6 @@ const DropDown = ({ hide, header }: DropMDetail) => {
       borderBottomRadius={Borders.md}
       overflow={"hidden"}
     >
-      {profileDetail.map((el) => {
-        return (
-          <Link legacyBehavior href={`/user/${el.link}`} key={el.name}>
-            <HStack
-              w="100%"
-              pl="16px"
-              py="8px"
-              _hover={{ opacity: 1 }}
-              opacity={0.8}
-              cursor={"pointer"}
-            >
-              <Icon as={el.icon} />
-              <Text letterSpacing={"1px"} className={style.headerDetail}>
-                {el.name}
-              </Text>
-            </HStack>
-          </Link>
-        );
-      })}
-
-      <ThemeTrigger setReverse={setReverse} reverse={reverse} />
-
-      <Box h="1px" w="100%" bg={"gray"} />
-
       <HStack
         onClick={() =>
           dispatcher({
@@ -111,8 +86,8 @@ const DropDown = ({ hide, header }: DropMDetail) => {
           })
         }
         _hover={{ opacity: 1 }}
-        opacity={0.8}
-        px="16px"
+        opacity={0.5}
+        px="25px"
         py="12px"
         w="100%"
         cursor={"pointer"}
@@ -123,10 +98,12 @@ const DropDown = ({ hide, header }: DropMDetail) => {
           letterSpacing={"1px"}
           cursor={"pointer"}
         >
-          {"Log Out"}
+          {"Гарах"}
         </Text>
       </HStack>
+      
     </VStack>
+    
   ) : null;
 };
 
@@ -163,18 +140,18 @@ export const Header = ({ isLoading, get_token, Handler, onOpen }: Header) => {
     >
       <HStack
         mx="auto"
-        maxW={"1800px"}
+        maxW={"1350px"}
         py={[3, 3, 3, 3, 0]}
         px={4}
         alignItems="center"
       >
         <HStack cursor="pointer" onClick={goToHome}>
           <Text
-            fontFamily="'Rubik', sans-serif"
+            fontFamily="'Comfortaa', sans-serif"
             fontWeight="bold"
             fontSize={["sm", "lg", "xl"]}
           >
-            VonKlara.com
+            VON KLARA
           </Text>
         </HStack>
         <Spacer />
@@ -207,7 +184,9 @@ export const Header = ({ isLoading, get_token, Handler, onOpen }: Header) => {
             {menus.map((el) => {
               return (
                 <Link href={`/${el.path}`} key={el.label}>
-                  <Text
+                  <Text 
+                    fontFamily={"Comfortaa, sans-serif"} 
+                    fontSize={'14px'}
                     color={"black"}
                     cursor={"pointer"}
                     fontWeight={"500"}
@@ -228,8 +207,8 @@ export const Header = ({ isLoading, get_token, Handler, onOpen }: Header) => {
           >
             {get_token() ? (
               <Box pos="relative">
-                <Avatar size="sm" src={data?.avatar} />
-                {/* <DropDown header={header} hide={hide} /> */}
+                <Avatar size="sm" src={data?.avatar} name='M S' />
+                <DropDown header={'header'} hide={hide} />
                 {data?.badgeGiven && (
                   <Icon
                     as={GoVerified}
@@ -245,7 +224,7 @@ export const Header = ({ isLoading, get_token, Handler, onOpen }: Header) => {
               <Button
                 bgImage={brandGradient}
                 bgSize="300% 100%"
-                color="white"
+                backgroundColor={'#D6CFDF'}
                 px={["5", "8"]}
                 fontSize="14px"
                 transition=" all .4s ease-in-out"

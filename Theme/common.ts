@@ -34,5 +34,5 @@ export const AbsoluteCenter = {
 	transform: "translate(-50%, -50%)",
 };
 export const brandGradient =
-	"linear-gradient(to right, #3385C2, #00D1A3, #3385C2)";
+	"linear-gradient(to right, #D6CFDF, #9F99A8, #D6CFDF)";
 export const gold = "#C2A779";

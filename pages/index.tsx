@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Stack>
+    <Stack bgColor={'white'}>
       <HomePages data={datas} isLoading={isLoading} />
     </Stack>
   );

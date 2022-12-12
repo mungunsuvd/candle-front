@@ -20,23 +20,23 @@
     "status": "success"
   },
   "login_success": {
-    "title": "Congratulations",
-    "description": "You successfully logged in",
+    "title": "Амжилттай ",
+    "description": "Та системд амжилттай нэвтэрлээ.",
     "status": "success"
   },
   "signup_success": {
-    "title": "Congratulations",
-    "description": "You successfully signed up. Please verify",
+    "title": "Амжилттай",
+    "description": "Бүртгэл амжилттай Please verify",
     "status": "success"
   },
   "reset_password": {
-    "title": "Congratulations",
-    "description": "your password has been successfully reseted",
+    "title": "Амжилттай",
+    "description": "Нууц үг амжилттай солигдлоо ",
     "status": "success"
   },
   "copy_success": {
-    "title": "Congratulations",
-    "description": "Successfully copied link",
+    "title": "Амжилттай",
+    "description": "Амжилттай хуулагдлаа ",
     "status": "success"
   },
   "copy_fail": {

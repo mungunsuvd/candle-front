@@ -69,7 +69,7 @@ export const Cart = () => {
         w={"150px"}
         right="0"
         top="500px"
-        backgroundColor="#f0bc68"
+        backgroundColor="#D6CFDF"
         h="150px"
         position="fixed"
         p={5}
@@ -78,7 +78,7 @@ export const Cart = () => {
       >
         <HStack>
           <Icon as={AiOutlineShoppingCart} />
-          <Text>{count} Candles </Text>
+          <Text fontFamily={"Comfortaa, sans-serif"} fontSize={'14px'} fontWeight='bold'> Сагс</Text>
         </HStack>
         <Flex borderRadius={"12px"} backgroundColor={"white"} p={2}>
           <Text>{price}MNT</Text>
@@ -88,7 +88,7 @@ export const Cart = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>{count} Candle</DrawerHeader>
+          <DrawerHeader>Сагсан дахь бараа</DrawerHeader>
           <Divider />
 
           <DrawerBody>
@@ -134,7 +134,7 @@ export const Cart = () => {
           <DrawerFooter>
             <Link style={{ width: "100%" }} href={"/order"}>
               <Button w="100%" colorScheme="green">
-                Buy
+                Захиалах 
               </Button>
             </Link>
           </DrawerFooter>

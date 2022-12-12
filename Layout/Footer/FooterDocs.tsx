@@ -11,9 +11,10 @@ export const FooterDocs = () => {
       px={["2", "2", "0"]}
       w={["100%", "100%", ""]}
       alignItems="flex-start"
+      
     >
-      <Text pr="1" pt="1">
-        ©2022 Von Klara. {"All right Reserved"}.
+      <Text pr="1" pt="1"   fontFamily="'Comfortaa', sans-serif">
+        ©2022 VON KLARA
       </Text>
       <HStack
         justifyContent="flex-start"
@@ -31,7 +32,7 @@ export const FooterDocs = () => {
             <Text>{FooterI11[locale].terms}</Text>
           </a>
         </Link> */}
-        <Text>•</Text>
+        <Text></Text>
         {/* <Link href="https://elfnft.s3.ap-southeast-1.amazonaws.com/termsandconditions/NFT.mn+_+Terms+of+Service+(1).pdf">
           <a target="_blank">
             <Text>{FooterI11[locale].privacyPolicy}</Text>

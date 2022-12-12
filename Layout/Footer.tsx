@@ -27,10 +27,13 @@ export function Footer() {
           flexDir={["column", "column", "row"]}
         >
           <HStack
+            bg={"#f5f5f5"}
             alignItems="flex-start"
             justifyContent="space-between"
             flexGrow={1}
-            w={["100%", null, null]}
+            padding={'20px'}
+            borderRadius='8px'
+            w={["80%", null, null]}
             px={["4"]}
             flexDir={["column", "row", "row"]}
           >
