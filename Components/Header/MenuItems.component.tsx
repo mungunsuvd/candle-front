@@ -13,13 +13,13 @@ import { useRouter } from "next/router";
 
 type menuItemType = {
   label: string;
-  path: "Hom56e" | "Categoy" | "Information" | "Special Order";
+  path: "Home" | "Categoy" | "Information" | "Special Order";
 };
 
 const menus: menuItemType[] = [
   {
     label: "Эхлэл",
-    path: "Homse",
+    path: "Home",
   },
   {
     label: "Ангилал ",
